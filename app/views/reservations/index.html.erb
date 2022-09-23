@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Reservaciones</h1>
+
+<div id="reservations">
+  <% @reservations.each do |reservation| %>
+    <%= render reservation %>
+    <p>
+      <%= link_to "Mostrar esta reservación", reservation %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Nueva reservación", new_reservation_path %>
